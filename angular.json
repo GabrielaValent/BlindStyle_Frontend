@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
               "path": "src/custom-webpack.config.ts"
