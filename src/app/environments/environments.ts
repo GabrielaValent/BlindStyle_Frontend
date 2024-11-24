@@ -1,5 +1,4 @@
 export const environment = {
-    production: Boolean(process.env['PRODUCTION']) || true,
-    apiUrll: process.env['API_PATH'] || "erro",
-    apiUrl: '${API_PATH}'
+    production: true,
+    apiUrl: "http://52.90.165.208:8000"
   }
