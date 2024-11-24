@@ -1,4 +1,5 @@
 export const environment = {
     production: Boolean(process.env['PRODUCTION']) || true,
-    apiUrl: process.env['API_PATH'] || "erro"
+    apiUrll: process.env['API_PATH'] || "erro",
+    apiUrl: '${API_PATH}'
   }

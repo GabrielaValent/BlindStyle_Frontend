@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FooterComponent } from "../../components/footer/footer.component";
 import { AuthService } from '../../services/auth/auth.service';
 import { FormsModule } from '@angular/forms'; 
+import { environment } from '../../environments/environments';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-  username: string = process.env['API_PATH'] || "erro";
+  username: string = environment.apiUrl;
   password: string = '';
   errorMessage: string = '';
 
