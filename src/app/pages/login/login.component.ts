@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-  username: string = '';
+  username: string = process.env['API_PATH'] || "erro";
   password: string = '';
   errorMessage: string = '';
 
