@@ -15,7 +15,7 @@ import { environment } from '../../environments/environments';
 })
 export class LoginComponent {
 
-  username: string = environment.apiUrl;
+  username: string = '';
   password: string = '';
   errorMessage: string = '';
 

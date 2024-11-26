@@ -15,6 +15,7 @@ import { RoupaHistComponent } from '../../components/roupa-hist/roupa-hist.compo
 export class HistoricoComponent implements OnInit {
 
   clothes: any
+  loading: Boolean = true
 
   constructor(private ApiService: ApiService) {}
 
@@ -26,9 +27,11 @@ export class HistoricoComponent implements OnInit {
     this.ApiService.getClothes().subscribe({
       next: (res)=>{
         this.clothes = res
+        this.loading = false
       },
       error: (error)=>{
         console.error(error)
+        this.loading = false
       }
     })
   }
