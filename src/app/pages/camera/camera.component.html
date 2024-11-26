@@ -1,11 +1,12 @@
-<app-header title="Camera"></app-header>
+<app-header title="Câmera"></app-header>
 <div class="camera">
     <div class="main-content">
         <div class="instructions">
             <!-- Botão para solicitar acesso à câmera -->
-            <app-btn label="Request Camera Access" from="cam" (click)="startCamera()"></app-btn>
+            <app-btn label="Solicitar Acesso a Câmera Frontal" from="cam" (click)="startCameraFrontal()"></app-btn>
+            <app-btn label="Solicitar Acesso a Câmera Traseira" from="cam" (click)="startCameraTraseira()"></app-btn>
             <!-- Botão para desligar a câmera -->
-            <app-btn label="Turn Off the Camera" from="cam" (click)="stopCamera()"></app-btn>
+            <app-btn label="Desligar a Câmera" from="cam" (click)="stopCamera()"></app-btn>
         </div>
 
         <!-- Vídeo -->
@@ -17,7 +18,7 @@
         <canvas #canvasElement style="display: none;"></canvas>
 
         <!-- Botão para tirar a foto -->
-        <app-btn label="Analyze photo" from="cam" (click)="takePhoto()"></app-btn>
+        <app-btn label="Analisar a foto" from="cam" (click)="takePhoto()"></app-btn>
     </div>
 
     <!-- Mensagem de erro -->

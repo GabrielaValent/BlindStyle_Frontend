@@ -9,8 +9,8 @@
         </div>
         <form (ngSubmit)="home()">
             <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required>
-            <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
-            <button (click)="home()" type="submit">Enter</button>
+            <input type="password" placeholder="Senha" [(ngModel)]="password" name="password" required>
+            <button (click)="home()" type="submit">Entrar</button>
         </form>
         <div class="error-message">
             <p>{{ errorMessage }}</p> 

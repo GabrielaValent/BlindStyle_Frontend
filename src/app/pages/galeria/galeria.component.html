@@ -1,9 +1,9 @@
-<app-header title="Gallery"></app-header>
+<app-header title="Galeria"></app-header>
 <div class="galeria">
     <div class="main-content">
         <div class="instructions">
             <!-- Botão para solicitar acesso a galeria -->
-            <app-btn label="Request Gallery Access" from="cam" (click)="openGallery()"></app-btn>
+            <app-btn label="Solicitar Acesso a Galeria" from="cam" (click)="openGallery()"></app-btn>
         </div>
 
         <input
@@ -19,7 +19,7 @@
         </div>
 
         <!-- Botão para enviar a foto -->
-        <app-btn label="Send photo" from="cam" (click)="convertToBase64()"></app-btn>
+        <app-btn label="Enviar foto" from="cam" (click)="convertToBase64()"></app-btn>
     </div>
     <div class="loading-overlay" *ngIf="loading">
         <div class="spinner"></div>

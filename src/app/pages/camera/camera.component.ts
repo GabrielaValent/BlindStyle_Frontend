@@ -31,7 +31,31 @@ export class CameraComponent implements AfterViewInit {
     console.log(this.videoElement);
   }
 
-  startCamera(): void {
+  //Solicitar acesso à câmera
+  startCameraFrontal(): void {
+    this.errorMessage = null;
+
+    // Verificar se o navegador suporta a API de getUserMedia
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          // Verifica se o vídeo foi encontrado
+          if (this.videoElement) {
+            this.videoElement.nativeElement.srcObject = stream;
+            this.isCameraActive = true;  // Marca a câmera como ativa
+          }
+        })
+        .catch((error) => {
+          // Exibe a mensagem de erro, se algo der errado
+          this.isCameraActive = false;
+          this.errorMessage = 'Não foi possível acessar a câmera. Erro: ' + error.message;
+        });
+    } else {
+      this.errorMessage = 'Seu navegador não suporta acesso à câmera.';
+    }
+  }
+
+  startCameraTraseira(): void {
     this.errorMessage = null;
   
     // Verificar se o navegador suporta a API de getUserMedia
